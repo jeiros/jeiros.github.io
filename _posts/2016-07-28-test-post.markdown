@@ -15,4 +15,4 @@ dummyFunction('foo', 'bar')
 
 Check out my [GitHub][gitpage] page.
 
-[jekyll-docs]: https://github.com/jeiros
+[gitpage]: https://github.com/jeiros
