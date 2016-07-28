@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "First test post!"
+date:   2016-07-28 12:22:57 -0400
+categories: jekyll update
+---
+Testing jekyll for a first blog post. I'm a complete newb of web development.
+
+Let's try and highlight a bit of python code:
+{% highlight python %}
+def dummyFunction(a, b):
+    print(a, b)
+dummyFunction('foo', 'bar')
+{% endhighlight %}
+
+Check out my [GitHub][gitpage] page.
+
+[jekyll-docs]: https://github.com/jeiros
