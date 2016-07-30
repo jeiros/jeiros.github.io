@@ -135,16 +135,12 @@ Same procedure as VMD. Click on .dmg file, drag Chimera icon to the Applications
 The binary is in `/Applications/Chimera.app/Contents/MacOS/chimera`.
 
 ### How to use chimera from the command line
-Either create an alias in your `.bash_profile`:
-```
-alias chimera = '/Applications/Chimera.app/Contents/MacOS/chimera'
-```
-Or do a symbolic link to somewhere in your `$PATH`:
-```
-sudo ln -s /Applications/Chimera.app/Contents/MacOS/chimera /usr/local/bin/chimera
-```
-Either option should work. I *think* `/usr/local/bin` is in the default $PATH, check it by typing `echo $PATH` and looking for it. If not create it (with sudo)
-and append it to the $PATH in your `~/.bash_profile`.
+Choose between:
+    - Create an alias in your `.bash_profile` with `alias chimera = '/Applications/Chimera.app/Contents/MacOS/chimera'`
+    - Do a symbolic link to somewhere in your `$PATH` with, for example:´sudo ln -s /Applications/Chimera.app/Contents/MacOS/chimera /usr/local/bin/chimera´
+Either option should work.
+I *think* `/usr/local/bin` is in the default $PATH, check it by typing `echo $PATH` and looking for it.
+If not create it (with sudo) and append it to the $PATH in your `~/.bash_profile`.
 
 
 

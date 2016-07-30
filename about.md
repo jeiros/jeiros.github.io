@@ -4,12 +4,10 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+I'm a PhD student at the [Institute of Chemical Biology](http://www.icb-cdt.co.uk/) at [Imperial College London](https://www.imperial.ac.uk/).
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
+I apply Molecular Dynamics simulations to understand the behaviour of cardiac Troponin, an important regulatory protein that is involved the 
+muscle contraction process.
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+Because for my PhD I spend all my time in front of a computer, I've developed an interest for computer science, although my formal background
+is in Chemistry.
