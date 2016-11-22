@@ -71,11 +71,13 @@ navigating to wherever the files you want to visualize are.
 
 1. Remove the space from the name of the Application (i.e. VMD1.9.2). This is best done from the Finder (spaces in the command line are a pain to work with).
 
-2. Add this to your `~/.bash_profile`:
+2. Add this to your `~/.bash_profile` file:
+
 ```
 vmdappdir='/Applications/VMD1.9.2.app/Contents'
 alias vmd='"$vmdappdir/Resources/VMD.app/Contents/MacOS/VMD" $*'
 ```
+
 **NOTE:** VMD only has 32-bit version for Mac OS X. This is bad because you'll only be able to open
 trajectories that are half the size of your RAM. More info on this issue [here](http://www.ks.uiuc.edu/Research/vmd/mailing_list/vmd-l/26606.html).
 
