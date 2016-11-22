@@ -10,8 +10,6 @@ I already wrote most of this a long time ago but is somewhere hidden in my GitHu
 Hopefully it's also useful for someone else although this is all pretty much really basic and I just write it down because 
 I easily forget things.
 
-
-
 ## Installing AmberTools
 Follow Jason Swail's [guide](http://jswails.wikidot.com/mac-os-x). Easy right?
 
@@ -25,15 +23,16 @@ In essence, these are the necessary things for AmberTools to work on a Mac:
 
 4. Use macports to install the compilers for AmberTools to work
 
-
 The gcc version 4.8 (known bug in [here](https://trac.macports.org/ticket/48471) failed for me so I installed the 4.9 version. 
 The commands were:
+
 ```
 sudo port install gcc49
 sudo port install mpich-gcc49
 sudo port select --set gcc mp-gcc49
 sudo port select --set mpi mpich-gcc49-fortran
 ```
+
 Once you complete all of the above steps without errors, you can actually start the installation of AmberTools:
 
 1. Download them from [here](http://ambermd.org/AmberTools15-get.html)
@@ -69,7 +68,6 @@ Now you can use vmd.
 Using VMD from the command line is very convenient as you can directly load the topology and trajectories files, or several PDBs
 very quickly. If you open VMD manually from the Dock it points every time to your home directory and you loose a lot of time manually
 navigating to wherever the files you want to visualize are. 
-
 
 1. Remove the space from the name of the Application (i.e. VMD1.9.2). This is best done from the Finder (spaces in the command line are a pain to work with).
 
