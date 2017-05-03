@@ -22,7 +22,7 @@ Where $$\frac{N}{M}$$ is the density of molecules.
 The ideal gas law is now reached assuming that this density is much smaller than 1,
 by applying the appropiate Taylor expansion:
 
-$$\ln(1-x) \approx -x(1+\frac{x^2}{2}+\frac{x^3}{3} + ... )$$
+$$\ln(1-x) \approx -x(1+\frac{x}{2}+\frac{x^2}{3} + ... )$$
 
 to the first equation, to give:
 
