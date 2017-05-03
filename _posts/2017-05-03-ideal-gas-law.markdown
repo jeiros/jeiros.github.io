@@ -4,7 +4,7 @@ title:  "Ideal gas law from a lattice model"
 date:   2017-05-03
 categories: statistical-mechanics matplotlib
 ---
-
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 I am preparing to be a Teaching Assistant for an undergraduate course of Statistical
 Mechanics. I am enjoying refreshing my knowledge on this topic by following the [Molecular Driving Forces][book]
 book. In my opinion, it strikes the right balance of theory and applied problems.
