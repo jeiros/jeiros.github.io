@@ -83,8 +83,8 @@ plt.show()
 
 From the right-hand side plot, we can see that the linear function
 is doing a decent job at approximating $$\log(1-x)$$ for $$x<0.1$$,
-where the absolute error is bound below around 5%. So the Law Of Ideal Gases turns
-out to be acceptable for gases with densities below 0.1!
+where the percent error is bound below around 5%. So the Law Of Ideal Gases is
+acceptable for gases that ocuppy 10% or less of their total available volume.
 
 This is of course nothing new since we're also assuming that particles of the gases are non-interacting.
 Modifications to this law like the
