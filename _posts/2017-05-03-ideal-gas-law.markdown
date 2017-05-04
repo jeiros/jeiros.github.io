@@ -73,7 +73,7 @@ for n in [1, 2, 5, 10]:
 
 ax0.plot(x_r, true_y, label='$\log(1-x)$', lw=4, ls='-')
 ax0.set(xlabel='x', ylabel='y')
-ax1.set(xlabel='x', ylabel='abs error (%)')
+ax1.set(xlabel='x', ylabel='error (%)')
 ax0.legend()
 plt.tight_layout()
 plt.show()
