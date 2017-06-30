@@ -33,8 +33,8 @@ An extension of the game is to calculate:
 $$ \Omega = \frac{n!}{\prod_{i=0}^{36}{n_{i}!}} $$
 
 After 2, 5, 15, 25 and 50 throws. $n$ is the total number of squares. $$n_{0}, n_{1}, n_{2}, ...$$ etc. are the number of squares with no counters, one counter, two counters, etc.
-$\Omega$ is the number of ways of distributing the counters on the board all having the same distribution diagram (also known as multiplicity). It is readily obtained as the number
-of ways of dividing $n$ objects into groups of $n_{0}, n_{1}, n_{2}, ...$ objects.
+$$\Omega$$ is the number of ways of distributing the counters on the board all having the same distribution diagram (also known as multiplicity). It is readily obtained as the number
+of ways of dividing $$n$$ objects into groups of $$n_{0}, n_{1}, n_{2}, ...$$ objects.
 
 Since playing this game can take quite some time, here is an implementation in Python.
 
@@ -106,28 +106,49 @@ class EnergyGame(object):
         assert initial_counters == final_counters
         return number_list, count_list
 
+    def visualize(self, ax=None):
+        """
+        Visualize the final distribution after playing the game
+        """
+        if ax is None:
+            f, ax = plt.subplots(1, 1, figsize=(7, 7))
+        n, c = self.playGame()
+        ax.bar(n, c, width=0.5)
+        if self.throws < 5000:
+            ax.set_title('%d throws' % self.throws)
+        else:
+            ax.set_title('{:.0E} throws'.format(self.throws))
+        plt.setp(ax.get_xticklabels(), visible=True)
+        ax.set(xlabel='Count', ylabel='Energy level')
+        return ax
+
 {% endhighlight %}
 
 Notice that we have added an attribute `start` to the `EnergyGame` class, whereby we can explore what happens if we decide to initialize the
 board in two different ways, either with the quanta of energy spread uniformly across the board, or all stacked up onto one of the squares.
 
 Now that we have the game ready, let's play!
-We'll use a plotting function that shows how the final distribution changes with the number of throws:
+
+The game can be played by instantiating an object of the EnergyGame class and calling the `visualize`
+method on it:
+
+{% highlight python %}
+board = EnergyGame(100, 'uniform')
+board.visualize()
+plt.show()
+{% endhighlight %}
+
+![plot0]({{ site.url }}/downloads/single_uni_game_100throws.png)
+
+Let's use a plotting function that shows how the final distribution changes with the number of throws:
 
 {% highlight python %}
 def plot_plays(start):
     f, axarr = plt.subplots(2, 2, figsize=(6, 6), sharey=True, sharex=False)
     for throws, coord in zip([5, 25, 100, int(1e4)], itertools.product([0, 1], [0, 1])):
         board = EnergyGame(throws, start)
-        n, c = board.playGame()
         ax = axarr[coord[0], coord[1]]
-        ax.bar(n, c, width=0.5)
-        if throws < 5000:
-            ax.set_title('%d throws' % throws)
-        else:
-            ax.set_title('{:.0E} throws'.format(throws))
-        plt.setp(ax.get_xticklabels(), visible=True)
-
+        board.visualize(ax=ax)
     axarr[0, 0].set_ylabel('Count')
     axarr[1, 0].set_ylabel('Count')
     axarr[1, 0].set_xlabel('Energy level')
@@ -142,7 +163,7 @@ Here's what it looks like for a `uniform` starting board:
 plot_plays('uniform').savefig('energy_game_uniform.png', dpi=300)
 {% endhighlight %}
 
-It looks like an exponential distribution is arising, even after only a handful of throws!
+An exponential distribution is arising, even after only a handful of throws!
 This is the [Boltzmann distribution](https://www.wikiwand.com/en/Boltzmann_distribution) since the entropy is being maximised under constraints:
 
 -  $$ \sum p_{i} = 1 $$
@@ -163,4 +184,4 @@ plot_plays('skewed').savefig('energy_game_skewed.png', dpi=300)
 You can download the game to reproduce the images [here][game]
 
 [gould]: https://www.imperial.ac.uk/people/i.gould
-[here]: https://github.com/jeiros/jeiros.github.io/blob/master/downloads/energygame.py
+[game]: https://github.com/jeiros/jeiros.github.io/blob/master/downloads/energygame.py

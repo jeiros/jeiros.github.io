@@ -64,20 +64,29 @@ class EnergyGame(object):
         assert initial_counters == final_counters
         return number_list, count_list
 
+    def visualize(self, ax=None):
+        """
+        Visualize the final distribution after playing the game
+        """
+        if ax is None:
+            f, ax = plt.subplots(1, 1, figsize=(7, 7))
+        n, c = self.playGame()
+        ax.bar(n, c, width=0.5)
+        if self.throws < 5000:
+            ax.set_title('%d throws' % self.throws)
+        else:
+            ax.set_title('{:.0E} throws'.format(self.throws))
+        plt.setp(ax.get_xticklabels(), visible=True)
+        ax.set(xlabel='Count', ylabel='Energy level')
+        return ax
+
 
 def plot_plays(start):
     f, axarr = plt.subplots(2, 2, figsize=(6, 6), sharey=True, sharex=False)
     for throws, coord in zip([5, 25, 100, int(1e4)], itertools.product([0, 1], [0, 1])):
         board = EnergyGame(throws, start)
-        n, c = board.playGame()
         ax = axarr[coord[0], coord[1]]
-        ax.bar(n, c, width=0.5)
-        if throws < 5000:
-            ax.set_title('%d throws' % throws)
-        else:
-            ax.set_title('{:.0E} throws'.format(throws))
-        plt.setp(ax.get_xticklabels(), visible=True)
-
+        board.visualize(ax=ax)
     axarr[0, 0].set_ylabel('Count')
     axarr[1, 0].set_ylabel('Count')
     axarr[1, 0].set_xlabel('Energy level')
@@ -87,5 +96,8 @@ def plot_plays(start):
 
 
 if __name__ == '__main__':
-    plot_plays('uniform').savefig('energy_game_uniform.png', dpi=300)
-    plot_plays('skewed').savefig('energy_game_skewed.png', dpi=300)
+    # plot_plays('uniform').savefig('energy_game_uniform.png', dpi=300)
+    # plot_plays('skewed').savefig('energy_game_skewed.png', dpi=300)
+    board = EnergyGame(100, 'uniform')
+    board.visualize()
+    plt.show()
