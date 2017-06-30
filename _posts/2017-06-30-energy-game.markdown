@@ -129,7 +129,7 @@ board in two different ways, either with the quanta of energy spread uniformly a
 
 Now that we have the game ready, let's play!
 
-The game can be played by instantiating an object of the EnergyGame class and calling the `visualize`
+The game can be played by instantiating an object of the `EnergyGame` class and calling the `visualize`
 method on it:
 
 {% highlight python %}
