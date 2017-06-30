@@ -10,7 +10,6 @@ This is a game that can be played in pairs to explore how the Boltzmann distribu
 from playing with dice and some simple rules. This is played as an introductory exercise of the
 'Molecular Driving Forces' class imparted by Dr. [Ian Gould][gould] at Imperial College London.
 
-# The Energy Distribution Game
 Consider a planar array of 36 atoms arranged in a 6x6 square. Suppose that each atom may accept one
 quanta of energy $$\epsilon$$. The quanta of energy are moved around randomly using dice throws, and are
 represented by counters.
