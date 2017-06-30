@@ -163,4 +163,4 @@ plot_plays('skewed').savefig('energy_game_skewed.png', dpi=300)
 You can download the game to reproduce the images [here][game]
 
 [gould]: https://www.imperial.ac.uk/people/i.gould
-[game]: {{ site.url }}/downloads/energygame.py
+[here]: https://github.com/jeiros/jeiros.github.io/blob/master/downloads/energygame.py
