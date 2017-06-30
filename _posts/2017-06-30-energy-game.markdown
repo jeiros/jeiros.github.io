@@ -31,7 +31,7 @@ An extension of the game is to calculate:
 
 $$ \Omega = \frac{n!}{\prod_{i=0}^{36}{n_{i}!}} $$
 
-After 2, 5, 15, 25 and 50 throws. $n$ is the total number of squares. $$n_{0}, n_{1}, n_{2}, ...$$ etc. are the number of squares with no counters, one counter, two counters, etc.
+After 2, 5, 15, 25 and 50 throws. $$n$$ is the total number of squares. $$n_{0}, n_{1}, n_{2}, ...$$ etc. are the number of squares with no counters, one counter, two counters, etc.
 $$\Omega$$ is the number of ways of distributing the counters on the board all having the same distribution diagram (also known as multiplicity). It is readily obtained as the number
 of ways of dividing $$n$$ objects into groups of $$n_{0}, n_{1}, n_{2}, ...$$ objects.
 
