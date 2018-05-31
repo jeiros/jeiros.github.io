@@ -3,15 +3,16 @@ layout: post
 title:  "Installing AmberTools-Chimera-VMD on a Mac"
 date:   2016-07-30 19:40:00 -0400
 tags: how-to
+comments: true
 ---
 
-I'm just writing this as how-to reference for installing useful software for MD research.
+I'm writing this as how-to reference for installing useful software for MD research.
 I already wrote most of this a long time ago but is somewhere hidden in my GitHub, so I'm putting it here for easier access.
-Hopefully it's also useful for someone else although this is all pretty much really basic and I just write it down because 
+Hopefully it's also useful for someone else although this is all pretty much really basic and I decided write it down because 
 I easily forget things.
 
 ## Installing AmberTools
-Follow Jason Swail's [guide](http://jswails.wikidot.com/mac-os-x). Easy right?
+Follow Jason Swail's [guide](http://jswails.wikidot.com/mac-os-x).
 
 In essence, these are the necessary things for AmberTools to work on a Mac:
 
@@ -96,7 +97,6 @@ Copy or download the script below and save it somewhere in your
 # removed after vmd is closed. 
 
 # Usage: load_big_trajs.sh topology.prmtop trajectories*.nc
-
 if [[ $# -lt 2 ]]; then
     printf "Please provide at least two arguments (top and traj file)\n"
     printf "Usage: load_big_trajs.sh topology.prmtop trajectories*.nc\n"
@@ -124,7 +124,7 @@ If you've followed the previous steps it should be the same as the one in the sc
 from the command line like so: `load_big_trajs.sh topology.prmtop trajectories*.nc` (provided you have a sensible naming scheme of your trajectories
 and they show up sequentially. Check this by doing `ls trajectories*.nc`).
 
-![My helpful screenshot]({{ site.url }}/downloads/thumbsup.gif)
+![My helpful screenshot](/downloads/thumbsup.gif)
 
 
 ## Installing UCSF Chimera

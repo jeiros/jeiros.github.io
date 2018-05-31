@@ -3,6 +3,7 @@ layout: post
 title:  "Ideal gas law from a lattice model"
 date:   2017-05-03
 categories: statistical-mechanics matplotlib
+comments: true
 ---
 {%include math.html %}
 
@@ -79,7 +80,7 @@ plt.tight_layout()
 plt.show()
 {% endhighlight %}
 
-![nice_plot]({{ site.url }}/downloads/taylor.png)
+![nice_plot](/downloads/taylor.png)
 
 From the right-hand side plot, we can see that the linear function
 is doing a decent job at approximating $$\log(1-x)$$ for $$x<0.1$$,

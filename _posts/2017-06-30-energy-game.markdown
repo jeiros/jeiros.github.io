@@ -3,6 +3,7 @@ layout: post
 title:  "The Energy Game"
 date:   2017-06-30
 categories: statistical-mechanics matplotlib
+comments: true
 ---
 {%include math.html %}
 
@@ -137,7 +138,7 @@ board.visualize()
 plt.show()
 {% endhighlight %}
 
-![plot0]({{ site.url }}/downloads/single_uni_game_100throws.png)
+![plot0](/downloads/single_uni_game_100throws.png)
 
 Let's use a plotting function that shows how the final distribution changes with the number of throws:
 
@@ -169,7 +170,7 @@ This is the [Boltzmann distribution](https://www.wikiwand.com/en/Boltzmann_distr
 
 -  $$ \sum E_{i}p_{i} = \langle E \rangle $$
 
-![plot1]({{ site.url }}/downloads/energy_game_uniform.png)
+![plot1](/downloads/energy_game_uniform.png)
 
 And we see the same behaviour from a `skewed` initial pose. It just takes longer to achieve because many of our trials are unsuccesful,
 specially at the beggining, where our dice will keep pointing us towards squares that are empty.
@@ -178,7 +179,7 @@ specially at the beggining, where our dice will keep pointing us towards squares
 plot_plays('skewed').savefig('energy_game_skewed.png', dpi=300)
 {% endhighlight %}
 
-![plot2]({{ site.url }}/downloads/energy_game_skewed.png)
+![plot2](/downloads/energy_game_skewed.png)
 
 You can download the game to reproduce the images [here][game]
 
