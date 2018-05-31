@@ -11,7 +11,7 @@ email: ${my-github-username}z@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Personal website of Juan Eiros Zamora.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "www.juaneiros.com" # the base hostname & protocol for your site
+url: "http://www.juaneiros.com" # the base hostname & protocol for your site
 twitter_username: JnEsZ
 github_username:  jeiros
 
